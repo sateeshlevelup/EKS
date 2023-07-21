@@ -1,0 +1,29 @@
+
+-> Please use the syntax for create EKS cluster
+
+  1) eksctl create cluster --name= < name > --region = us-east-1 --zones =us-east-1a,us-east-1b --without-nodegroup
+
+-> Once the cluster is created assocaite IAM OIDC Provider for EKS cluster with Following Command
+
+  2) eksctl utils assocaite-iam-oidc-provider --region us-east-1 --cluster < clu name> --approve
+
+ > Create  node group
+
+   3) eksctl create nodegroup --cluster= < cluster name > \
+                       --region=us-east-1 \
+                       --name=< desiredname> \
+                       --node-type=t3.medium \
+                       --nodes=2 \
+                       --nodes-min=2 \
+                       --nodes-max=4 \
+                       --node-volume-size=20 \
+                       --ssh-access \
+                       --ssh-public-key=< key-pair> \
+                       --managed \
+                       --asg-access \
+                       --external-dns-access \
+                       --full-ecr-access \
+                       --appmesh-access \
+                       --alb-ingress-access 
+
+
