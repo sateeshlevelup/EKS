@@ -1,7 +1,7 @@
 
 -> Please use the syntax for create EKS cluster
 
-  1) eksctl create cluster --name= < name > --region = us-east-1 --zones =us-east-1a,us-east-1b --without-nodegroup
+  1) eksctl create cluster --name=< name > --region=us-east-1 --zones=us-east-1a,us-east-1b --without-nodegroup
 
 -> Once the cluster is created assocaite IAM OIDC Provider for EKS cluster with Following Command
 
