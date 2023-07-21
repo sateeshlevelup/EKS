@@ -1,5 +1,5 @@
 
--> Please use the syntax for create EKS cluster
+-> Please use the syntax to create EKS cluster
 
   1) eksctl create cluster --name=< name > --region=us-east-1 --zones=us-east-1a,us-east-1b --without-nodegroup
 
