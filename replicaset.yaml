@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-pod
+  labels:
+    app: my-first-app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: my-first-app
+  template:
+    metadata:
+      labels:
+        app: my-first-app
+    spec:
+      containers:
+      - name: my-levelup-app
+        image: levelupk8/k8:version1
+~
