@@ -1,0 +1,19 @@
+    Kubectl run <pod name> --image < name of the image>
+    kubectl get pods
+    kubectl get po
+    kubectl expose pod demo --type=NodePort --port=80 --name=levelup-service
+    kubectl get svc
+    kubectl get nodes
+    kubectl get nodes -o wide
+    vi demo.yaml
+    kubectl apply -f demo.yaml
+     vi demo.yaml
+    kubectl apply -f demo.yaml
+     vi demo.yaml
+     kubectl apply -f demo.yaml
+     kubectl get pods
+     kubectl logs demo
+     kubectl exec -it demo
+     kubectl exec -it demo -- /bin/bash
+     kubectl exec -it demo ls
+     kubectl describe pod demo
