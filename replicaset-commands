@@ -1,0 +1,19 @@
+
+
+   > vi demo-replica.yaml
+   >  kubectl create -f demo-replica.yaml
+   >  Kubectl get pods
+   >  kubectl delete pod my-pod-z2rhf
+   >  kubectl get pods
+   >  kubectl get replicaset
+   >  kubectl get rs
+   >  kubectl describe rs  my-pod
+   >  kubectl expose rs my-pod --type=NodePort --port=80 --name=my-pod-rs-service
+   >  kubectl get svc
+   >  kubectl get nodes -o wide
+   >  vi demo-replica.yaml
+   >  kubectl replace -f demo-replica.yaml
+   >  kubectl get po
+   >  kubectl delete rs my-pod
+   >  kubectl get rs
+  
