@@ -1,0 +1,24 @@
+  >  kubectl create deployment demo-levelup-deploy --image levelupk8/k8:version1
+  >  kubectl get deploy
+  >  kubectl get rs
+  >  kubectl get po
+  >  kubectl scale --replicas=15 deployment/demo-levelup-deploy
+  >  kubectl get po
+  >  kubectl scale --replicas=5 deployment/demo-levelup-deploy
+  >  kubectl get po
+  >  kubectl scale --replicas=25 deployment/demo-levelup-deploy
+  >  kubectl get po
+  >  kubectl expose deployment demo-levelup-deploy --type=NodePort --port=80 --name=leveup-app-svc
+  >  kubectl get svc
+  >  kubectl get nodes -o wide
+  >  kubectl get po
+  >  kubectl get deployment demo-levelup-deploy -o yaml
+  >  kubectl set image deployment/demo-levelup-deploy k8=levelupk8/k8:version3
+  >  kubectl edit deployment/demo-leevlup-deploy
+  >  kubectl edit deployment/demo-levlup-deploy
+  >  kubectl edit deployment/demo-levelup-deploy
+  >  kubectl get po
+  >  kubectl get deploy
+  >  kubectl edit deployment/demo-levelup-deploy
+  >  kubectl rollout status deployment/demo-levelup-deploy
+  >  kubectl get po
