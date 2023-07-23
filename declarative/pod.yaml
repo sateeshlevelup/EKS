@@ -1,0 +1,17 @@
+apiVersion: v1   # String
+kind: Pod    # String
+metadata:  # Dictionary
+  name: levelup-pod
+  labels: # Dictionary
+   app: myapp
+spec:
+ containers: # list
+  - name: myapp
+    image: levelupk8/k8:version1
+    ports:
+     - containerPort: 80
+
+Run this with Kubectl
+kubectl create -f <name.yaml>
+      or
+Kubectl apply -f <name.yaml>      
