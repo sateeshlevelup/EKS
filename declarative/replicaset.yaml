@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: myrs-1
+spec:
+ replicas: 10
+ selector: 
+  matchLabels:
+   app: myapp2
+ template:
+  metadata:  # Dictionary
+    name: levelup2-pod
+    labels: # Dictionary
+    app: myapp
+  spec:
+  containers: # list
+    - name: myapp2
+      image: levelupk8/k8:version3
+      ports:
+      - containerPort: 80
+    
