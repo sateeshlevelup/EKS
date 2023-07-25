@@ -24,3 +24,7 @@ spec:
       volumes:
       - name: my-volume
         emptyDir: {}
+
+Login to the pod and see the /data dir
+Kubectl exec --it <podname> -- /bin/bash
+        
