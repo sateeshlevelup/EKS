@@ -69,4 +69,14 @@ spec:
             claimName: efs-pvc
 
 
+Step 5:- login to any pod
+
+kubectl exec -it < pod name> -- /bin/bash
+cd data
+creata a file and add data 
+
+step 6 :-
+mount the nfs to any server and observe the data or mount to any pod and observe the data
+
+
 
