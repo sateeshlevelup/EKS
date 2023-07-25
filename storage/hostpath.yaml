@@ -1,0 +1,48 @@
+This file is used to create a volume on the node and share with the pods
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vol-hostpath
+  labels:
+    app: my-app1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app1
+  template:
+    metadata:
+      labels:
+        app: my-app1
+    spec:
+      containers:
+      - name: my-app-container2
+        image: levelupk8/k8:version1
+        ports:
+        - containerPort: 80  # Change this to the desired port your app listens on
+        volumeMounts:
+        - name: hostpath-volume
+          mountPath: /data1  # Change this to the desired mount path within the container
+      volumes:
+      - name: hostpath-volume
+        hostPath:
+          path: /levelup  # Change this to the desired path on the host machine
+          type: DirectoryOrCreate  # This can be set to "Directory" or "DirectoryOrCreate"
+
+
+> once the pods are launched use the command below to see the pods are launced on which node
+
+   > Kubectl describe <Pod name>
+
+In this command output you will find the node ip address where the POd is Lanuched
+
+   > Login to the node and go the specified path   :  /levelup
+   > create files and save
+   > login in to container
+     Kubectl exec -it < pod Name> -- /bin/bash
+   > Observe if you are able to see the files that is created on the node  
+   
+    
+  
+          
