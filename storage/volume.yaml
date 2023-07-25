@@ -1,1 +1,26 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: levelupk8/k8:version1
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: my-volume
+          mountPath: /data
+      volumes:
+      - name: my-volume
+        emptyDir: {}
