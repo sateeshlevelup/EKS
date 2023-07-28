@@ -25,7 +25,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: levelup
         - name: MYSQL_DATABASE
-          value: levelup@060606
+          value: myfirsttable
         - name: MYSQL_USER
           value: sateesh
         - name: MYSQL_PASSWORD
