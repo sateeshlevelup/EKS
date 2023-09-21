@@ -3,7 +3,7 @@
 
   1) eksctl create cluster --name=< name > --region=us-east-1 --zones=us-east-1a,us-east-1b --without-nodegroup
 
--> Once the cluster is created assocaite IAM OIDC Provider for EKS cluster with Following Command
+-> Once the cluster is created associate IAM OIDC Provider for EKS cluster with Following Command
 
   2) eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster < clu name> --approve
 
