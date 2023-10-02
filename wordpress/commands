@@ -1,0 +1,27 @@
+ cd /
+    mkdir wordpress
+    cd wordpress
+    git clone https://github.com/sateeshlevelup/EKS.git
+    cd EKS
+    ls
+    cd wordpress
+    ls
+    kubectl apply -f .
+    kubectl get nodes -o wide
+    kubectl get svc
+      see the Ip address of the database pod
+   kubectl describe pod wordpress-mysql-5bf6574fd9-8vlsh
+    
+      MYSQL_ROOT_PASSWORD:  levelup
+      MYSQL_DATABASE:       myfirsttable
+      MYSQL_USER:           sateesh
+      MYSQL_PASSWORD:       levelup
+
+Login in to the database POD
+kubectl exec -it <POD> -- /bin/bash  
+Commands to run inside the DB
+   mysql -u root -p -h localhost
+     show databases;
+     use myfirsttable;
+     show tables;
+     select * from wp_users;
