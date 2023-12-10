@@ -19,3 +19,5 @@ Kubectl apply -f <name.yaml>
 
 
 Documentation:- https://kubernetes.io/docs/concepts/workloads/pods/
+
+https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#pod-v1-core
