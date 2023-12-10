@@ -15,3 +15,7 @@ Run this with Kubectl
 kubectl create -f <name.yaml>
       or
 Kubectl apply -f <name.yaml>      
+
+
+
+Documentation:- https://kubernetes.io/docs/concepts/workloads/pods/
