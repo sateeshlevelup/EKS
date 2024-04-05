@@ -10,8 +10,8 @@ spec:
  template:
   metadata:  # Dictionary
     name: levelup2-pod
-    labels: # Dictionary
-    app: myapp
+    labels: 
+     app: myapp
   spec:
   containers: # list
     - name: myapp2
